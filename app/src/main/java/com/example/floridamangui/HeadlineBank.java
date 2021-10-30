@@ -2,64 +2,55 @@ package com.example.floridamangui;
 import java.util.HashMap;
 
 public class HeadlineBank {
-    public static void headlines()
+    public static HashMap<Integer,Headline> myHeadlines = new HashMap<>();
+
+    public static void generateHeadlines() {
+        Headline h1 = new Headline("FLORIDA MAN GETS BEAT UP BY ...","The easter bunny","The police","Ronald McDonald","5 lower school kids");
+        myHeadlines.put(h1.getId(),h1);
+        Headline h2 = new Headline("FLORIDA MAN CLINGS TO ... SPEEDING DOWN HIGHWAY", "Semitruck", "Car", "Motorcycle", "Ambulance");
+        myHeadlines.put(h2.getId(), h2);
+        Headline h3 = new Headline("FLORIDA MAN TRIES TO SHOOT ..., ... SHOOTS HIM INSTEAD", "Puppy, puppy", "Old lady, old lady", "Alligator, alligator", "Obama, Obama");
+        myHeadlines.put(h3.getId(), h3);
+        Headline h4 = new Headline("FLORIDA MAN USES 4 MILLION IN COVID RELIEF TO BUY ...", "Lamborghini", "A dog", "Illegal animals", "Lifetime supply of whey protein");
+        myHeadlines.put(h4.getId(), h4);
+        Headline h5 = new Headline("NAKED FLORIDA MAN DRINKS 2 LITERS OF ..., BURNS DOWN HOUSE BAKING ... ON GEORGE FOREMAN GRILL", "Vodka, cookies", "Rum, cookies", "Beer, cake", "Water, cake");
+        myHeadlines.put(h5.getId(), h5);
+        Headline h6 = new Headline("NAKED FLORIDA MAN THROWS ... AT CARS", "Rocks", "Bricks", "Computers", "Random Nokia phones");
+        myHeadlines.put(h6.getId(), h6);
+        Headline h7 = new Headline("FLORIDA MAN CHARGED WITH ASSAULT WITH A DEADLY WEAPON AFTER THROWING ... THROUGH WENDY'S DRIVE-THRU WINDOW", "Alligator", "Granede", "A rock", "Bluetooth speakers blasting Spongebob's theme song");
+        myHeadlines.put(h7.getId(), h7);
+        Headline h8 = new Headline("FLORIDA MAN STEALS A CAR, REALIZES A ... IS IN IT, DROPS ... OFF SAFELY, AND MAKES HIS GET AWAY", "Baby", "Dog", "Cat", "Land mine");
+        myHeadlines.put(h8.getId(), h8);
+        Headline h9 = new Headline("THOUSANDS OF GUN OWNERS IN FLORIDA PLANNING TO 'SHOOT DOWN' ...", "Hurricane irma", "Big bird", "Barney the dinosaur", "Wild turkey");
+        myHeadlines.put(h9.getId(), h9);
+        Headline h10 = new Headline("FLORIDA MAN TRIES TO STEAL GAMESTOP WHILE WEARING ... ON HIS HEAD", "Transparent bag", "The queen's guard hat", "Pink beret", "A defective mask");
+        myHeadlines.put(h10.getId(), h10);
+    }
+
+
+    public static boolean outOfQuestions(int i) {
+        if(i < myHeadlines.size()) {
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+
+    public static void headlines(Integer id, String story, String answer, String incorrect1, String incorrect2, String incorrect3)
         {
-        HashMap<String, String> storyObjects = new HashMap<String, String>();
 
-            storyObjects.put("headline1", "FLORIDA MAN GETS BEAT UP BY ...");
-            storyObjects.put("headline2", "FLORIDA MAN CLINGS TO ... SPEEDING DOWN HIGHWAY");
-            storyObjects.put("headline3", "FLORIDA MAN TRIES TO SHOOT ..., ... SHOOTS HIM INSTEAD");
-            storyObjects.put("headline4", "FLORIDA MAN USES 4 MILLION IN COVID RELIEF TO BUY ...");
-            storyObjects.put("headline5", "NAKED FLORIDA MAN DRINKS 2 LITERS OF ..., BURNS DOWN HOUSE BAKING ... ON GEORGE FOREMAN GRILL");
-            storyObjects.put("headline6", "NAKED FLORIDA MAN THROWS ... AT CARS");
-            storyObjects.put("headline7", "FLORIDA MAN CHARGED WITH ASSAULT WITH A DEADLY WEAPON AFTER THROWING ... THROUGH WENDY'S DRIVE-THRU WINDOW");
-            storyObjects.put("headline8", "FLORIDA MAN STEALS A CAR, REALIZES A ... IS IN IT, DROPS ... OFF SAFELY, AND MAKES HIS GET AWAY");
-            storyObjects.put("headline9", "THOUSANDS OF GUN OWNERS IN FLORIDA PLANNING TO 'SHOOT DOWN' ...");
-            storyObjects.put("headline10","FLORIDA MAN TRIES TO STEAL GAMESTOP WHILE WEARING ... ON HIS HEAD");
+        HashMap<String, Object> storyObjects = new HashMap<String, Object>();
 
-            storyObjects.put("answer1", "The easter bunny");
-            storyObjects.put("answer2", "Semitruck");
-            storyObjects.put("answer3", "Puppy, puppy");
-            storyObjects.put("answer4", "Lamborghini");
-            storyObjects.put("answer5", "Vodka, cookies");
-            storyObjects.put("answer6", "Rocks");
-            storyObjects.put("answer7", "Alligator");
-            storyObjects.put("answer8", "Baby");
-            storyObjects.put("answer9", "Hurricane irma");
-            storyObjects.put("answer10", "Transparent bag");
-
-            storyObjects.put("incorrectAnswer1", "The police");
-            storyObjects.put("incorrectAnswer2", "Ronald McDonald");
-            storyObjects.put("incorrectAnswer3", "5 lower school kids");
-            storyObjects.put("incorrectAnswer4", "Car");
-            storyObjects.put("incorrectAnswer5", "Motorcycle");
-            storyObjects.put("incorrectAnswer6", "Ambulance");
-            storyObjects.put("incorrectAnswer7", "Old lady, old lady");
-            storyObjects.put("incorrectAnswer8", "Alligator, alligator");
-            storyObjects.put("incorrectAnswer9", "Obama, Obama");
-            storyObjects.put("incorrectAnswer10", "A dog");
-            storyObjects.put("incorrectAnswer11", "Illegal animals");
-            storyObjects.put("incorrectAnswer12", "Lifetime supply of whey protein");
-            storyObjects.put("incorrectAnswer13", "Rum, cookies");
-            storyObjects.put("incorrectAnswer14", "Beer, cake");
-            storyObjects.put("incorrectAnswer15", "Water, cake");
-            storyObjects.put("incorrectAnswer16", "Bricks");
-            storyObjects.put("incorrectAnswer17", "Computers");
-            storyObjects.put("incorrectAnswer18", "Random Nokia phones");
-            storyObjects.put("incorrectAnswer19", "Granede");
-            storyObjects.put("incorrectAnswer20", "A rock");
-            storyObjects.put("incorrectAnswer21", "Bluetooth speakers blasting Spongebob's theme song");
-            storyObjects.put("incorrectAnswer22", "Dog");
-            storyObjects.put("incorrectAnswer23", "Cat");
-            storyObjects.put("incorrectAnswer24", "Land mine");
-            storyObjects.put("incorrectAnswer25", "Big bird");
-            storyObjects.put("incorrectAnswer26", "Barney the dinosaur");
-            storyObjects.put("incorrectAnswer27", "Wild turkey");
             storyObjects.put("incorrectAnswer28", "The queen's guard hat");
             storyObjects.put("incorrectAnswer29", "Pink beret");
             storyObjects.put("incorrectAnswer30", "A defective mask");
 
 
             //OVERRIDE EQUALS AND HASHCODE
+    }
+    public static Headline headlineManager{
+
+            Object h = new Object();
     }
 }
