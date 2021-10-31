@@ -42,9 +42,6 @@ public class HeadlineBank {
 
         HashMap<String, Object> storyObjects = new HashMap<String, Object>();
 
-            storyObjects.put("incorrectAnswer28", "The queen's guard hat");
-            storyObjects.put("incorrectAnswer29", "Pink beret");
-            storyObjects.put("incorrectAnswer30", "A defective mask");
 
 
             //OVERRIDE EQUALS AND HASHCODE
