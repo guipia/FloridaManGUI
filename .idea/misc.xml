@@ -3,8 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="app/src/main/res/layout/activity_2.xml" value="0.18169398907103826" />
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.22" />
+        <entry key="..\:/Users/guipq/StudioProjects/FloridaManGUI/app/src/main/res/drawable/ic_launcher_background.xml" value="0.32222222222222224" />
+        <entry key="..\:/Users/guipq/StudioProjects/FloridaManGUI/app/src/main/res/layout/activity_2.xml" value="0.5" />
+        <entry key="..\:/Users/guipq/StudioProjects/FloridaManGUI/app/src/main/res/layout/activity_main.xml" value="0.33" />
       </map>
     </option>
   </component>

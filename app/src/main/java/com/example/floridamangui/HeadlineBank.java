@@ -46,8 +46,5 @@ public class HeadlineBank {
 
             //OVERRIDE EQUALS AND HASHCODE
     }
-    public static Headline headlineManager{
 
-            Object h = new Object();
-    }
 }

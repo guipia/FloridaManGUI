@@ -63,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
         Player player1 = new Player();
         player1.primaryID = 1;
         player1.username = "Guipia";
-        player1.password = "MyPassword";
+        player1.password = "Gp001171";
         player1.fullName = "Guilherme Piacsek";
         player1.bestScore = 0;
 
