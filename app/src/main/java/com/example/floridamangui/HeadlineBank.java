@@ -30,10 +30,10 @@ public class HeadlineBank {
 
     public static boolean outOfQuestions(int i) {
         if(i < myHeadlines.size()) {
-            return true;
+            return false;
         }
         else {
-            return false;
+            return true;
         }
     }
 
